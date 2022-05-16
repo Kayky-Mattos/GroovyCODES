@@ -1,6 +1,7 @@
 # GroovyCODES
 
-###projeto ManipulandoJSON
+<h1 align="center"> projeto ManipulandoJSON </h1>
+
 ## :hammer: Funcionalidades do projeto
 Nese arquivo temos a manipulação de um JSON da API viacep ai manipulamos campos
 - `exclusão de campos`: Excluir uma key do JSON
