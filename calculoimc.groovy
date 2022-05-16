@@ -4,6 +4,12 @@ import groovy.json.*;
 import java.time.*;
 import java.text.DecimalFormat;
 
+// esse é o nosso input, no caso hardcode mas pode vir de um API etc
+//{
+//    "peso"    : 73,
+//    "altura"  : 1.80
+//}
+
 def Message processData(Message message) {
     
     //Mapeando JSON
