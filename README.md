@@ -1,6 +1,6 @@
 # GroovyCODES
 
-<h1 align="center"> projeto ManipulandoJSON </h1>
+<h3 align="center"> ManipulandoJSON </h3>
 
 ## :hammer: Funcionalidades do projeto
 Nese arquivo temos a manipulação de um JSON da API viacep ai manipulamos campos
