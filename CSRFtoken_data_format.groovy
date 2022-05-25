@@ -48,10 +48,12 @@ def Message processData(Message message)
     //   jsonObject.'Last Modified' = sample[6..9]+sample[3..4]+sample[0..1]
 
     
-    def data = jsonObject.'Last Modified'
-    def date = new Date().parse("dd-MM-yyyy", data)
-    SimpleDateFormat formatador = new SimpleDateFormat("yyyyMMdd")
-    jsonObject.'Last Modified' = formatador.format(date)    
+    // def data = jsonObject.'Last Modified'
+    // def date = new Date().parse("dd-MM-yyyy", data)
+    // SimpleDateFormat formatador = new SimpleDateFormat("yyyyMMdd")
+    // jsonObject.'Last Modified' = formatador.format(date) 
+    
+    // Pode ser feita diretamente no JSON, assim como mostra na linha 66
 /*----------------------------------------------------------------------------------*/
 
 
@@ -61,9 +63,10 @@ def Message processData(Message message)
             GrupoMateial      : jsonObject.MaterialGroup,
             CriadoPor         : jsonObject.CreatedBy,
             ModificadoPor     : jsonObject.ModifiedBy,
-            UltimaModificacao : jsonObject.'Last Modified',
+            UltimaModificacao : Date.parse("dd-MM-yyyy", jsonObject."Last Modified").format("yyyyMMdd"),
             Ativo             : jsonObject.Active
             )
+            
             
             message.setBody(JsonOutput.prettyPrint(json))
     
